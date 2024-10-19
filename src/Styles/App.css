@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgba(2, 151, 201, 0.75);
+  border-radius: 0.5rem;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(2, 151, 201);
+}
+body::-webkit-scrollbar-thumb:active {
+  background: rgb(2, 151, 201);
+}
+body::-webkit-scrollbar-corner {
+  background: #fff;
+}/*# sourceMappingURL=App.css.map */

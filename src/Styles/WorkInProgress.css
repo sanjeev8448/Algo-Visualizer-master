@@ -1,0 +1,27 @@
+#home-page-btn {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid black;
+}
+#home-page-btn:hover {
+  background: white;
+  color: black;
+}
+
+.error-boundary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  gap: 2rem;
+}/*# sourceMappingURL=WorkInProgress.css.map */

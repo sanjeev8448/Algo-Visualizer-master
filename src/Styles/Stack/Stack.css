@@ -1,0 +1,135 @@
+#stack-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 2rem;
+}
+#stack-container .stack-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+#stack-container #stack-box {
+  height: 600px;
+  width: 400px;
+  border-radius: 10px;
+  border: 2px solid rgb(2, 151, 201);
+  border-top-color: transparent;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  position: relative;
+}
+#stack-container #stack-box .empty-filler {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  opacity: 0.5;
+  font-size: 5rem;
+  letter-spacing: 30px;
+}
+#stack-container #stack-box .empty-filler div {
+  transform: rotate(270deg);
+}
+#stack-container #stack-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-direction: column;
+}
+#stack-container #stack-form > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#stack-container #stack-form button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: rgb(2, 151, 201);
+  color: white;
+}
+#stack-container #stack-form input {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 1.2rem;
+  border: 1px solid black;
+}
+#stack-container .stack-item {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(2, 151, 201);
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  border-radius: 10px;
+}
+#stack-container .stack-item.appear {
+  animation: appear-stack-box 1s ease-in-out;
+}
+#stack-container .stack-item.disappear {
+  animation: disappear-stack-box 1s ease-in-out forwards;
+}
+@keyframes disappear-stack-box {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    border: 2px solid red;
+  }
+  20% {
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
+@keyframes appear-stack-box {
+  0% {
+    transform: translateY(-200px) scale(1.1);
+    opacity: 0;
+    border: 2px solid rgba(0, 255, 0, 0.8);
+  }
+  40% {
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
+    border: 2px solid rgba(0, 255, 0, 0.8);
+  }
+  60% {
+    transform: translateY(0) scale(1.1);
+    border: 2px solid rgba(0, 255, 0, 0.8);
+  }
+  80% {
+    transform: translateY(0) scale(1.1);
+    border: 2px solid rgba(0, 255, 0, 0.8);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    border: 2px solid rgba(0, 255, 0, 0.8);
+  }
+}
+#stack-container .stack-item.selected {
+  border: 2px solid rgba(0, 255, 0, 0.8);
+  transform: scale(1.1);
+}/*# sourceMappingURL=Stack.css.map */

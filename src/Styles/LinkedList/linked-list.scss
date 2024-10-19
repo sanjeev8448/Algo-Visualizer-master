@@ -1,0 +1,113 @@
+#linked-list-parent {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#linked-list-svg {
+  width: 100vw;
+  height: 100vh;
+}
+
+.linked-list-node-base {
+  stroke-width: 1px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  opacity: 0;
+  transform: translate(0, -50px) scale(1);
+
+  .data-node,
+  .pointer-node {
+    stroke-width: 2px;
+    stroke: red;
+    fill: white;
+    width: 100px;
+    height: 70px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .pointer-node {
+    stroke: blue;
+  }
+
+  .container-node {
+    stroke-width: 3px;
+    stroke: black;
+    fill: white;
+    width: 240px;
+    height: 110px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .node-text,
+  .address-text {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .address-text {
+    font-size: 20px;
+  }
+
+  &.appear {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+
+  &.selected {
+    .container-node {
+      filter: drop-shadow(0px 0px 20px green);
+      stroke: lightgreen;
+      stroke-width: 5px;
+    }
+  }
+
+  &.delete {
+    opacity: 0;
+    transform: translate(0, -50px) scale(1);
+  }
+}
+
+.node-path {
+  stroke-width: 3px;
+  stroke: #00dd00;
+  fill: white;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  transform: translate(0px, 0);
+
+  &.hide {
+    opacity: 0;
+    transform: translate(-50px, 0);
+  }
+}
+
+#linked-list-controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 20px;
+  padding-top: 20px;
+
+  button {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}

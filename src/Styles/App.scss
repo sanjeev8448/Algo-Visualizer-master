@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+
+  &-track {
+    background: #fff;
+  }
+
+  &-thumb {
+    background: rgba(2, 151, 201, 0.75);
+    border-radius: 0.5rem;
+  }
+
+  &-thumb:hover {
+    background: rgba(2, 151, 201, 1);
+  }
+
+  &-thumb:active {
+    background: rgba(2, 151, 201, 1);
+  }
+
+  &-corner {
+    background: #fff;
+  }
+}
